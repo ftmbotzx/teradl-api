@@ -10,43 +10,28 @@ app = Flask(__name__)
 
 #UNWORKING COOKIES JUST FOR DEMO
 # cookies = {
-#     'ndut_fmt': 'C96770F2F5849984C2BA2A3F6284E3769F4147D175CD113DA30A8F2DE4CCD1FF',
-#     'ndus': 'YvdD63MteHuiw0IgOC3Kdp-b5nahyIkzD_XdJDj2',
-#     '__bid_n': '1900b9f02442253dfe4207',
-#     '__stripe_mid': 'f5763c3a-0bc5-455f-8bbc-ef5a3a30f25d212bf2',
-#     '__stripe_sid': '74502fe5-8572-4d7d-8171-6b47b1c5faf170be67',
-#     'browserid': 'ujWfJR9sAO3NO7oCPbQ5IF_P6feJPiSxonWQoahA05CtJ1XhBmDy8oEXuDs=',
-#     'csrfToken': 'X-KjyUF6Ezr5GVv53zbJSTeh',
-#     'lang': 'en',
+#     'ndut_fmt': '',
+#     'ndus': '',
+#     '__bid_n': '',
+#     '__stripe_mid': '',
+#     '__stripe_sid': '',
+#     'browserid': '',
+#     'csrfToken': '',
+#     'lang': '',
 #     'PANWEB': '1'
 # }
 
 
-#WORKING COOKIES
-cookies = {
-    'PANWEB': '1',
-    'browserid': '45Cbkepkx0J0bqgQi1e1ubtbstmebahkYOYm3ZWuIktZFHaUuRjvdeeHz24=',
-    'lang': 'en',
-    '__bid_n': '196b885ed7339790814207',
-    'ndut_fmt': '26BE3C564003BEB97F4ED69DEBD9974F6291C708F2B2B419F0B6282675131E1C',
-    '__stripe_mid': '31fc92f3-a12a-480f-9e44-53f30f08258a75588e',
-    'ndus': 'YdZTyX1peHuimlux_D6dLGQBeHmj0r3M3trkunHB',
-    'csrfToken': 'C84Gc54sleTMoZxBx24k4SM7',
-}
-
-
-
-#WORKING COOKIES
-# cookies = {
-#     'PANWEB': '1',
-#     'browserid': 'p4nVrnlkUVKcnbbJHnIClAhSL5uXs01e-0svx0bm7KHLUB6wIVvCUNGLIpU=',
-#     'lang': 'en',
-#     '__bid_n': '1900b9f02442253dfe4207',
-#     'ndut_fmt': '5E7E5AFA065E159EF56CFE164FCF084C72B603BE3611911C28550443BDC08A4B',
-#     '__stripe_mid': 'b85d61d2-4812-4eeb-8e41-b1efb3fa2a002a54d5',
-#     'ndus': 'YylKpiCteHuiYEqq8n75Tb-JhCqmg0g4YMH03MYD',
-#     'csrfToken': 'zAVdnQAVegC92-ah6pmLf6Dl',
-# }
+ cookies = {
+     'PANWEB': '1',
+     'browserid': 'p4nVrnlkUVKcnbbJHnIClAhSL5uXs01e-0svx0bm7KHLUB6wIVvCUNGLIpU=',
+     'lang': 'en',
+     '__bid_n': '1900b9f02442253dfe4207',
+     'ndut_fmt': '5E7E5AFA065E159EF56CFE164FCF084C72B603BE3611911C28550443BDC08A4B',
+     '__stripe_mid': 'b85d61d2-4812-4eeb-8e41-b1efb3fa2a002a54d5',
+     'ndus': 'YylKpiCteHuiYEqq8n75Tb-JhCqmg0g4YMH03MYD',
+     'csrfToken': 'zAVdnQAVegC92-ah6pmLf6Dl',
+ }
 
 
 headers = {
@@ -176,7 +161,7 @@ async def format_message(link_data):
 @app.route('/')
 def hello_world():
   #result = bot.get_me()
-  response = {'status': 'success', 'message': 'Working Fully',' Contact': '@GuyXD'}
+  response = {'status': 'success', 'message': 'Working Fully',' Contact': '@ftmdeveloperz'}
   return response
 
 
@@ -203,14 +188,14 @@ async def Api():
 async def help():
     try:
         response = {'Info': "There is Only one Way to Use This as Show Below",
-                    'Example': 'https://teraboxx.vercel.app/api?url=https://terafileshare.com/s/1_1SzMvaPkqZ-yWokFCrKyA',
-                    'Example2': 'https://teraboxx.vercel.app/api2?url=https://terafileshare.com/s/1_1SzMvaPkqZ-yWokFCrKyA'}
+                    'Example': 'https://terabox-dl.vercel.app/api?url=https://terafileshare.com/s/1_1SzMvaPkqZ-yWokFCrKyA',
+                    'Example2': 'https://terabox-dl.vercel.app/api2?url=https://terafileshare.com/s/1_1SzMvaPkqZ-yWokFCrKyA'}
         return jsonify(response)
     except Exception as e:
         logging.error(f"An error occurred: {e}")
         response = {'Info': "There is Only one Way to Use This as Show Below",
-                    'Example': 'https://teraboxx.vercel.app/api?url=https://terafileshare.com/s/1_1SzMvaPkqZ-yWokFCrKyA',
-                    'Example2': 'https://teraboxx.vercel.app/api2?url=https://terafileshare.com/s/1_1SzMvaPkqZ-yWokFCrKyA'}
+                    'Example': 'https://terabox-dl.vercel.app/api?url=https://terafileshare.com/s/1_1SzMvaPkqZ-yWokFCrKyA',
+                    'Example2': 'https://terabox-dl.vercel.app/api2?url=https://terafileshare.com/s/1_1SzMvaPkqZ-yWokFCrKyA'}
         return jsonify(response)
 
 
