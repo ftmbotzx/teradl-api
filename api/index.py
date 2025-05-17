@@ -175,14 +175,14 @@ async def Api():
 async def help():
     try:
         response = {'Info': "There is Only one Way to Use This as Show Below",
-                    'Example': 'https://terabox-dl.vercel.app/api?url=https://terafileshare.com/s/1_1SzMvaPkqZ-yWokFCrKyA',
-                    'Example2': 'https://terabox-dl.vercel.app/api2?url=https://terafileshare.com/s/1_1SzMvaPkqZ-yWokFCrKyA'}
+                    'Example': 'https://terabox-dl-orcin.vercel.app/api?url=https://terafileshare.com/s/1_1SzMvaPkqZ-yWokFCrKyA',
+                    'Example2': 'https://terabox-dl-orcin.vercel.app/api2?url=https://terafileshare.com/s/1_1SzMvaPkqZ-yWokFCrKyA'}
         return jsonify(response)
     except Exception as e:
         logging.error(f"An error occurred: {e}")
         response = {'Info': "There is Only one Way to Use This as Show Below",
-                    'Example': 'https://terabox-dl.vercel.app/api?url=https://terafileshare.com/s/1_1SzMvaPkqZ-yWokFCrKyA',
-                    'Example2': 'https://terabox-dl.vercel.app/api2?url=https://terafileshare.com/s/1_1SzMvaPkqZ-yWokFCrKyA'}
+                    'Example': 'https://terabox-dl-orcin.vercel.app/api?url=https://terafileshare.com/s/1_1SzMvaPkqZ-yWokFCrKyA',
+                    'Example2': 'https://terabox-dl-orcin.vercel.app/api2?url=https://terafileshare.com/s/1_1SzMvaPkqZ-yWokFCrKyA'}
         return jsonify(response)
 
 
@@ -270,7 +270,7 @@ async def fetch_download_link_async2(url):
                         file_info = {
                             "file_name": file.get("server_filename"),
                             "link": file.get("dlink"),
-                            "direct_link": direct_download_url,  # Extracted direct download link
+                            "dlink": direct_download_url,  # Extracted direct download link
                             "thumb": file.get("thumbs", {}).get("url3", "https://default_thumbnail.png"),
                             "size": await get_formatted_size_async(file.get("size", 0)),
                             "sizebytes": file.get("size", 0),
