@@ -126,22 +126,31 @@ async def get_formatted_size_async(size_bytes):
       return None
 
 async def format_message(link_data):
-  # Process thumbnails
     thumbnails = {}
     if 'thumbs' in link_data:
         for key, url in link_data['thumbs'].items():
-            if url:  # Skip empty URLs
+            if url:
                 dimensions = extract_thumbnail_dimensions(url)
                 thumbnails[dimensions] = url
-#   if link_data
+
     file_name = link_data["server_filename"]
     file_size = await get_formatted_size_async(link_data["size"])
     download_link = link_data["dlink"]
-    sk = {
-      'Title': file_name,
-      'Size': file_size,
-      'Direct Download Link': download_link,
-      'Thumbnails': thumbnails
+
+    # Get direct fast download link using HEAD request
+    try:
+        r = requests.Session()
+        response = r.head(download_link, headers=headers, allow_redirects=False)
+        direct_link = response.headers.get("Location")
+    except Exception as e:
+        direct_link = None
+
+    return {
+        'Title': file_name,
+        'Size': file_size,
+        'Direct Download Link': download_link,
+        'fast_link': direct_link,
+        'Thumbnails': thumbnails
     }
     return sk
 
