@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
- cookies = {
+cookies = {
     'PANWEB': '1',
     'browserid': 'p4nVrnlkUVKcnbbJHnIClAhSL5uXs01e-0svx0bm7KHLUB6wIVvCUNGLIpU=',
     'lang': 'en',
