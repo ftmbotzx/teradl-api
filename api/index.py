@@ -10,16 +10,18 @@ app = Flask(__name__)
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-cookies = {Add commentMore actions
+cookies = {
     'PANWEB': '1',
-    'browserid': '45Cbkepkx0J0bqgQi1e1ubtbstmebahkYOYm3ZWuIktZFHaUuRjvdeeHz24=',
+    '__bid_n': '1900b9f02442253dfe4207',
+    '__stripe_mid': 'b85d61d2-4812-4eeb-8e41-b1efb3fa2a002a54d5',
+    'ndus': 'YylKpiCteHuiYEqq8n75Tb-JhCqmg0g4YMH03MYD',
+    'csrfToken': '_CFePPJLR7i9z5IPx1cQydow',
+    'browserid': '3y0kiWkfKhPHtg5J8dZFSYtwNzncsGY7n3JOtIJsdZ6Wo4XfJxNeA28UtIE=',
     'lang': 'en',
-    '__bid_n': '196b885ed7339790814207',
-    'ndut_fmt': '26BE3C564003BEB97F4ED69DEBD9974F6291C708F2B2B419F0B6282675131E1C',
-    '__stripe_mid': '31fc92f3-a12a-480f-9e44-53f30f08258a75588e',
-    'ndus': 'YdZTyX1peHuimlux_D6dLGQBeHmj0r3M3trkunHB',
-    'csrfToken': 'C84Gc54sleTMoZxBx24k4SM7',
+    'ndut_fmt': '3ABC40FE764692D905796B3BF93947ADFDC570385C17E3A68137C9D7451429E0',
+    '__stripe_sid': 'b2997993-3227-4e11-a688-c355d62839c678db3c',
 }
+
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0',
