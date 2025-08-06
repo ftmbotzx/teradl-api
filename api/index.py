@@ -37,7 +37,7 @@ def find_between(string, start, end):
   return string[start_index:end_index]
 
 
-async def fetch_download_link_async(url):
+async def fetch_download_link_async2(url):
   try:
       async with aiohttp.ClientSession(cookies=cookies, headers=headers) as session:
           async with session.get(url) as response1:
@@ -163,8 +163,8 @@ def hello_world():
   return response
 
 
-@app.route(rule='/api', methods=['GET'])
-async def Api():
+@app.route(rule='/api2', methods=['GET'])
+async def Api2():
   try:
       url = request.args.get('url', 'No URL Provided')
       logging.info(f"Received request for URL: {url}")
@@ -212,7 +212,7 @@ async def get_formatted_size_async(size_bytes):
         return None
 
 
-async def fetch_download_link_async2(url):
+async def fetch_download_link_async(url):
     try:
         async with aiohttp.ClientSession(cookies=cookies, headers=headers) as session:
             async with session.get(url) as response1:
@@ -296,8 +296,8 @@ async def fetch_download_link_async2(url):
 
 
 
-@app.route(rule='/api2', methods=['GET'])
-async def Api2():
+@app.route(rule='/api', methods=['GET'])
+async def Api():
     try:
         url = request.args.get('url', 'No URL Provided')
         logging.info(f"Received request for URL: {url}")
